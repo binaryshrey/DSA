@@ -6,6 +6,7 @@ A beginner's guide to getting started with Data Structures and Algorithms with J
 * [Hello World](#2-hello-world)
 
 <br>
+
 ### 1. Installation
 ```bash
 $ sudo apt update
