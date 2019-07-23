@@ -9,6 +9,7 @@ A beginner's guide to getting started with Data Structures and Algorithms with J
 * [Features of JAVA](#5-features-of-java)
 * [Byte Code](#6-byte-code)
 * [Data Types](#7-data-types)
+* [String Manipulation](#8-string-manipulation)
 
 <br>
 
@@ -101,11 +102,61 @@ converts the Byte Code to MLL.
   * Class
   * Array
   * Interface etc
+  
+
+### 8. String Manipulation
+
+#### Built-in Character methods
+
+* Character.isLetter()
+* Character.isDigit()
+* Character.isLetterorDigit()
+* Character.isWhiteSpace()
+* Character.isUpperCase()
+* Character.isLowerCase()
+* Character.toLowerCase()
+* Character.toLowerCase()
+
+#### Built-in String methods
+
+* toLowerCase()
+* toUpperCase()
+* replace()
+* trim()
+* equals()
+* equalsIgnoreCase()
+* compareTo()
+* length()
+* charAt()
+* substring()
+* indexOf()
+* lastIndexOf()
+* concat()
+* endsWith()
+* startWith()
+
+#### Built-in StringBuffer methods
+```
+StringBuffer st1 = new StringBuffer(st2);
+```
+* append()
+* setCharAt()
+* insert()
+* delete()
+* setLength()
+* reverse()
 
 
 
+#### String to Primitive type
+```
+int n = Integer.parseInt(str);
+```
 
-
+### Primitive to String type
+```
+String str = Integer.toString(n);
+```
 
 
 
