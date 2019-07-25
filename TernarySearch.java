@@ -5,6 +5,7 @@ import java.lang.*;
 import java.io.*;
 
 /* Name of the class has to be "Main" only if the class is public. */
+//Time Complexity : O(log3n)
 class Codechef
 {
     public static int TernarySearch(int arr[],int l,int r,int k){
