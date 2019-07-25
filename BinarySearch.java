@@ -9,14 +9,15 @@ import java.io.*;
 class Codechef
 {
     public static int BinarySearch(int arr[],int l, int r, int x){
-        int mid = l + (r-l)/2;
-        while(r>=l){
+        
+        if(r>=l){
+	    int mid = l + (r-l)/2;
             if(arr[mid]==x)
                 return mid;
-            else if(arr[mid]>x)
+            if(arr[mid]>x)
                 return BinarySearch(arr,l,mid-1,x);
-            else    
-                return BinarySearch(arr,mid+1,r,x);
+            
+	    return BinarySearch(arr,mid+1,r,x);
         }
         return -1;
     }
