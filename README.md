@@ -10,6 +10,7 @@ A beginner's guide to getting started with Data Structures and Algorithms with J
 * [Byte Code](#6-byte-code)
 * [Data Types](#7-data-types)
 * [String Manipulation](#8-string-manipulation)
+* [Arrays](#9-arrays)
 
 <br>
 
@@ -157,6 +158,93 @@ int n = Integer.parseInt(str);
 ```
 String str = Integer.toString(n);
 ```
+
+
+### 9. Arrays
+
+An array is a group of like-typed variables that are referred to by a common name
+The direct superclass of an array type is Object.
+Every array type implements the interfaces Cloneable and java.io.Serializable.
+```
+int arr[] = new int[10];	//declaring and allocating memory
+int num[] = {1,2,3,4,5};	//storing the data
+Student[] arr = new Student[7]; //Array of Objects - student is a user-defined class
+```
+
+#### Passing arrays to Methods
+```
+class Test 
+{   
+    public static void main(String args[])  
+    { 
+        int arr[] = {3, 1, 2, 5, 4}; 
+        sum(arr); 
+    } 
+    public static void sum(int[] arr)  
+    { 
+        int sum = 0;     
+        for (int i = 0; i < arr.length; i++) 
+            sum+=arr[i]; 
+        System.out.println("sum of array values : " + sum); 
+    } 
+} 
+```
+
+#### Returning Arrays from Methods
+
+```
+class Test 
+{     
+    public static void main(String args[])  
+    { 
+        int arr[] = m1();     
+        for (int i = 0; i < arr.length; i++) 
+            System.out.print(arr[i]+" "); 
+    } 
+    public static int[] m1()  
+    { 
+        return new int[]{1,2,3}; 
+    } 
+} 
+```
+
+#### Cloning of arrays
+When you clone a single dimensional array, such as Object[], a “deep copy” is performed with the new array containing copies of the original array’s elements as opposed to references.
+```
+class Test 
+{     
+    public static void main(String args[])  
+    { 
+        int intArray[] = {1,2,3};     
+        int cloneArray[] = intArray.clone();
+        System.out.println(intArray == cloneArray); 	//false
+        for (int i = 0; i < cloneArray.length; i++) { 
+            System.out.print(cloneArray[i]+" "); 	//1 2 3
+        } 
+    } 
+} 
+```
+
+A clone of a multidimensional array (like Object[][]) is a “shallow copy” however, which is to say that it creates only a single new array with each element array a reference to an original element array but subarrays are shared.
+```
+class Test 
+{     
+    public static void main(String args[])  
+    { 
+        int intArray[][] = {{1,2,3},{4,5}}; 
+        int cloneArray[][] = intArray.clone();
+	
+        System.out.println(intArray == cloneArray);		//false
+        System.out.println(intArray[0] == cloneArray[0]); 	//true
+        System.out.println(intArray[1] == cloneArray[1]); 	//true
+          
+    } 
+} 
+```
+
+
+
+
 
 
 
