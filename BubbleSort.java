@@ -6,6 +6,7 @@ import java.io.*;
 
 /* Name of the class has to be "Main" only if the class is public. */
 //TC : O(n),O(n^2),O(n^2)
+//Stable
 class Codechef
 {
     void BubbleSort(int arr[]){
