@@ -11,6 +11,7 @@ A beginner's guide to getting started with Data Structures and Algorithms with J
 * [Data Types](#7-data-types)
 * [String Manipulation](#8-string-manipulation)
 * [Arrays](#9-arrays)
+* [ArrayList](#10-arraylist)
 
 <br>
 
@@ -243,7 +244,57 @@ class Test
 ```
 
 
+### 10. ArrayList
 
+Java ArrayList class uses a dynamic array for storing the elements. It inherits AbstractList class and implements List interface. The List interface extends Collection and Iterable interfaces in hierarchical order.
+
+#### Declaration
+````
+ArrayList<Integer> list = new ArrayList<Integer>();	//variable size
+ArrayList<Boolean> list = new ArrayList<Boolean>(10);	//fixed size
+ArrayList<String>  list = new ArrayList<String>();
+````
+	
+#### Methods 
+* add(Object o): This method is used to append a specificd element to the end of a list.
+* addAll(int index, Collection C): Used to insert all of the elements starting at the specified position from a specific collection into the mentioned list.
+* remove(int index): Removes the element at the specified position in this list.
+* removeAll(Collection c): Removes from this list all of its elements that are contained in the specified collection
+* retainAll(Collection c): Retains only the elements in this list that are contained in the specified collection.
+* contains(Object o): Returns true if this list contains the specified element.
+* set(int index, E element): Replaces the element at the specified position in this list with the specified element.
+* isEmpty(): Returns true if this list contains no elements.
+* size(): Returns the number of elements in this list.
+* get(int index): Returns the element at the specified position in this list.
+* indexOf(Object O): The index the first occurrence of a specific element is either returned, or -1 in case the element is not in the list.
+* lastIndexOf(Object O): The index the last occurrence of a specific element is either returned, or -1 in case the element is not in the list.
+* clear(): This method is used to remove all the elements from any list.
+
+#### iterating over ArrayList
+* for loop
+```
+ArrayList<Integer> list = new ArrayList<Integer>(5);
+for(int i=0;i<list.size();i++){
+	System.out.println(list.get(i));
+}
+```
+
+* forEach
+```
+ArayList<Integer> list = new ArrayList<Integer>(5);
+list.forEach(lists -> {
+	System.out.println(lists);
+})
+````
+
+#### Searching
+* contains(Object o): Returns true if this list contains the specified element.
+* indexOf(Object O): The index the first occurrence of a specific element is either returned, or -1 in case the element is not in the list.
+* lastIndexOf(Object O): The index the last occurrence of a specific element is either returned, or -1 in case the element is not in the list.
+
+#### Sorting
+* Collections.sort()
+* ArrayList.sort()
 
 
 
