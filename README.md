@@ -12,6 +12,7 @@ A beginner's guide to getting started with Data Structures and Algorithms with J
 * [String Manipulation](#8-string-manipulation)
 * [Arrays](#9-arrays)
 * [ArrayList](#10-arraylist)
+* [Binary Tree](#11-binary-tree)
 
 <br>
 
@@ -297,6 +298,29 @@ list.forEach(lists -> {
 * ArrayList.sort()
 
 
+### 11. Binary Tree
+A tree whose elements have at most 2 children is called a binary tree. Since each element in a binary tree can have only 2 children, we typically name them the left and right child.
+A Binary Tree node contains following parts:
+* Data
+* Pointer to left child
+* Pointer to right child
+
+
+Unlike Arrays, Linked Lists, Stack and queues, which are linear data structures, trees are hierarchical data structures.
+
+```
+class Node 
+{ 
+    int key; 
+    Node left, right; 
+  
+    public Node(int item) 
+    { 
+        key = item; 
+        left = right = null; 
+    } 
+} 
+```
 
 
 
