@@ -13,6 +13,7 @@ A beginner's guide to getting started with Data Structures and Algorithms with J
 * [Arrays](#9-arrays)
 * [ArrayList](#10-arraylist)
 * [Binary Tree](#11-binary-tree)
+* [Algorithm Analysis](#12-algorithm-analysis)
 
 <br>
 
@@ -324,5 +325,123 @@ class Node
 
 
 
+### 12. Algorithm Analysis
+An algorithm is a finite sequence of logically related instructions to solve a computational problem.
+#### Types of Algorithm
+* Iterative 
+```
+Fact(n)
+{
+	for i = 1 to n
+	fact = fact * i;
+	return fact;
+}
+```
 
+* Recursive
+```
+Fact(n)
+{
+	if n = 1
+		return 1;
+	else
+		return n * fact(n-1);
+}
+```
+#### Asymptotic Analysis
+* Big-oh notation
+```
+The function f (n) = O(g(n)) if and only if there exist positive constants c, n 0 such that
+f(n) ≤ cg(n), ∀n ≥ n 0 .
+```
+Big-oh can be used to denote all upper bounds on the time complexity of an algorithm. Big-oh also captures the worst case analysis of an algorithm.
+
+
+* Omega notation
+```
+The function f (n) = Ω(g(n)) if and only if there exist positive constants c, n 0 such that f (n) ≥
+c.g(n), ∀n ≥ n 0 .
+```
+Omega can be used to denote all lower bounds of an algorithm. Omega notation also denotes the best case analysis of an algorithm.
+
+* Theta notation
+```
+The function f (n) = Θ(g(n)) if and only if there exist positive constants c1 , c2 , n0 such that
+c1 g(n) ≤ f (n) ≤ c2 g(n), ∀n ≥ n0 .
+```
+Theta can be used to denote tight bounds of an algorithm.
+
+
+#### Alternative Big-oh notations:
+* O(1)		: O(yeah)
+* O(logn)	: O(nice)
+* O(n logn)	: O(k-ish)
+* O(n)		: O(ok)
+* O(n^2)	: O(my)
+* O(2^n)	: O(no)
+* O(n^n) 	: O(damn)
+* O(n!)		: O(mg!)
+
+
+#### Calucalting Time-Complexity for Recurrence relations
+* Substitution Method
+* Master Theorem
+
+```
+Master Theorem :
+Let a≥1 and b>1 be constants, let f(n) be a non negative function,
+and let T(n) be defined on the non-negative integers by the recurrence
+
+T (n) = aT (n/b) + f (n)
+
+Then T (n) has the following asymptotic bounds:
+
+Case 1: If f(n) = O(n log b a−e ) for some constant e>0 Then T (n) = θ(n log b a )
+Case 2: If f(n) = θ(n log b a ) then T (n) = θ(n log b a * log n)
+Case 3: If f(n) = Ω(n log b a+e ) for some constant e>0, and if af (n/b) ≤ cf (n) for
+some constant c<1 and all sufficiently large n, then T (n) = θ(f(n)).
+```
+
+#### Analysis of Loops
+
+* O(1) : set of non-recursive and non-loop statements
+* O(n)
+```
+for (int i = 1; i <= n; i += c) {  
+	// some O(1) expressions
+}
+for (int i = n; i > 0; i -= c) {
+	// some O(1) expressions
+}
+ ```
+ *  O(n^c)
+ ```
+for (int i = 1; i <=n; i += c) {
+	for (int j = 1; j <=n; j += c) {
+		// some O(1) expressions	
+	}
+}
+for (int i = n; i > 0; i -= c) {
+	for (int j = i+1; j <=n; j += c) {
+		// some O(1) expressions
+}
+```
+* O(Logn)
+```
+for (int i = 1; i <=n; i *= c) {
+	// some O(1) expressions
+}
+for (int i = n; i > 0; i /= c) {
+	// some O(1) expressions
+}
+```
+* O(LogLogn)
+```
+for (int i = 2; i <=n; i = pow(i, c)) { 
+	// some O(1) expressions
+}
+for (int i = n; i > 1; i = fun(i)) { 
+	// some O(1) expressions
+}
+```
 
