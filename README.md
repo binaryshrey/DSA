@@ -1,4 +1,4 @@
-# DSA  ![GitHub forks](https://img.shields.io/github/forks/binaryshrey/DSA.svg?style=social) ![Twitter Follow](https://img.shields.io/twitter/follow/binaryshrey.svg?style=social)
+# DSA  
 A beginner's guide to getting started with Data Structures and Algorithms with JAVA.
 
 ### Table of contents
@@ -272,7 +272,7 @@ ArrayList<String>  list = new ArrayList<String>();
 * lastIndexOf(Object O): The index the last occurrence of a specific element is either returned, or -1 in case the element is not in the list.
 * clear(): This method is used to remove all the elements from any list.
 
-#### iterating over ArrayList
+#### Iterating over ArrayList
 * for loop
 ```
 ArrayList<Integer> list = new ArrayList<Integer>(5);
@@ -351,16 +351,16 @@ Fact(n)
 #### Asymptotic Analysis
 * Big-oh notation
 ```
-The function f (n) = O(g(n)) if and only if there exist positive constants c, n 0 such that
-f(n) ≤ cg(n), ∀n ≥ n 0 .
+The function f(n) = O(g(n)) if and only if there exist positive constants c, n0 such that
+f(n) ≤ cg(n), ∀n ≥ n0 .
 ```
 Big-oh can be used to denote all upper bounds on the time complexity of an algorithm. Big-oh also captures the worst case analysis of an algorithm.
 
 
 * Omega notation
 ```
-The function f (n) = Ω(g(n)) if and only if there exist positive constants c, n 0 such that f (n) ≥
-c.g(n), ∀n ≥ n 0 .
+The function f (n) = Ω(g(n)) if and only if there exist positive constants c, n0 such that f(n) ≥
+c.g(n), ∀n ≥ n0.
 ```
 Omega can be used to denote all lower bounds of an algorithm. Omega notation also denotes the best case analysis of an algorithm.
 
@@ -392,14 +392,14 @@ Master Theorem :
 Let a≥1 and b>1 be constants, let f(n) be a non negative function,
 and let T(n) be defined on the non-negative integers by the recurrence
 
-T (n) = aT (n/b) + f (n)
+T(n) = aT(n/b) + f(n)
 
-Then T (n) has the following asymptotic bounds:
+Then T(n) has the following asymptotic bounds:
 
-Case 1: If f(n) = O(n log b a−e ) for some constant e>0 Then T (n) = θ(n log b a )
-Case 2: If f(n) = θ(n log b a ) then T (n) = θ(n log b a * log n)
+Case 1: If f(n) = O(n log b a−e ) for some constant e>0 Then T(n) = θ(n log b a )
+Case 2: If f(n) = θ(n log b a ) then T(n) = θ(n log b a * log n)
 Case 3: If f(n) = Ω(n log b a+e ) for some constant e>0, and if af (n/b) ≤ cf (n) for
-some constant c<1 and all sufficiently large n, then T (n) = θ(f(n)).
+some constant c<1 and all sufficiently large n, then T(n) = θ(f(n)).
 ```
 
 #### Analysis of Loops
