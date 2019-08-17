@@ -120,6 +120,7 @@ converts the Byte Code to MLL.
 * Character.isLowerCase()
 * Character.toLowerCase()
 * Character.toLowerCase()
+* Character.getNumericValue()
 
 #### Built-in String methods
 
