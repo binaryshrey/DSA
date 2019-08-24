@@ -140,16 +140,24 @@ converts the Byte Code to MLL.
 * endsWith()
 * startWith()
 
-#### Built-in StringBuffer methods
+#### Built-in StringBuilder methods
 ```
-StringBuffer st1 = new StringBuffer(st2);
+StringBuilder st1 = new StringBuilder("Hello");
+StringBuilder st2 = new StringBuilder();
 ```
-* append()
-* setCharAt()
-* insert()
-* delete()
+* append() : st1.append(" World")
+* insert() : st1.insert(1,"JAVA")
+* replace() : st1.replace(3,7,"c++")
+* delete() : st1.delete(3,7)
+* reverse() : st1.reverse()
+* setCharAt() : st1.setCharAt(4,'b')
+* capacity()
+* charAt()
+* indexOf()
+* lastIndexOf()
+* substring()
 * setLength()
-* reverse()
+
 
 
 
