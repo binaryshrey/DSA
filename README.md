@@ -142,8 +142,8 @@ converts the Byte Code to MLL.
 
 #### Built-in StringBuilder methods
 ```
-StringBuffer st1 = new StringBuffer("Hello");
-StringBuffer st2 = new StringBuffer();
+StringBuilder st1 = new StringBuilder("Hello");
+StringBuilder st2 = new StringBuilder();
 ```
 * append() : st1.append(" World")
 * insert() : st1.insert(1,"JAVA")
