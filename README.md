@@ -13,11 +13,12 @@ A beginner's guide to getting started with Data Structures and Algorithms with J
 * [JVM](#9-jvm)
 * [Garbage Collector](#10-garbage-collector)
 * [Data Types](#11-data-types)
-* [String Manipulation](#12-string-manipulation)
-* [Arrays](#13-arrays)
-* [ArrayList](#14-arraylist)
-* [Binary Tree](#15-binary-tree)
-* [Algorithm Analysis](#16-algorithm-analysis)
+* [Variables](#12-variables)
+* [String Manipulation](#13-string-manipulation)
+* [Arrays](#14-arrays)
+* [ArrayList](#15-arraylist)
+* [Binary Tree](#16-binary-tree)
+* [Algorithm Analysis](#17-algorithm-analysis)
 
 <br>
 
@@ -162,8 +163,32 @@ i = null;
   * Array
   * Interface etc
   
+  
+### 12. Variables
+A Variable is a named memory location that holds a value.
+There are three types of variables in Java:
+* Local Variables : 
+	* A variable defined within a block or method or constructor is called local variable. 
+	* These variable are created when the block in entered or the function is called and destroyed after exiting from the block or when the call returns from the function.
+	* Initilisation of Local Variable is Mandatory.
+	* The scope of these variables exists only within the block in which the variable is declared. i.e. we can access these variable only within that block.
 
-### 12. String Manipulation
+* Instance Variables: 
+	* Instance variables are non-static variables and are declared in a class outside any method, constructor or block.
+	* As instance variables are declared in a class, these variables are created when an object of the class is created and destroyed when the object is destroyed.
+	* Unlike local variables, we may use access specifiers for instance variables. If we do not specify any access specifier then the default access specifier will be used.
+	* Initilisation of Instance Variable is not Mandatory. Its default value is 0
+	* Instance Variable can be accessed only by creating objects.
+	
+* Static Variables: 
+	* Static variables are also known as Class variables. These variables are declared similarly as instance variables, the difference is that static variables are declared using the static keyword within a class outside any method constructor or block.
+	* Unlike instance variables, we can only have one copy of a static variable per class irrespective of how many objects we create.
+	* Static variables are created at the start of program execution and destroyed automatically when execution ends.
+	* Initilisation of Static Variable is not Mandatory. Its default value is 0
+	
+  
+
+### 13. String Manipulation
 
 #### Built-in Character methods
 
@@ -227,7 +252,7 @@ String str = Integer.toString(n);
 ```
 
 
-### 13. Arrays
+### 14. Arrays
 
 An array is a group of like-typed variables that are referred to by a common name
 The direct superclass of an array type is Object.
@@ -310,7 +335,7 @@ class Test
 ```
 
 
-### 14. ArrayList
+### 15. ArrayList
 
 Java ArrayList class uses a dynamic array for storing the elements. It inherits AbstractList class and implements List interface. The List interface extends Collection and Iterable interfaces in hierarchical order.
 
@@ -363,7 +388,7 @@ list.forEach(lists -> {
 * ArrayList.sort()
 
 
-### 15. Binary Tree
+### 16. Binary Tree
 A tree whose elements have at most 2 children is called a binary tree. Since each element in a binary tree can have only 2 children, we typically name them the left and right child.
 A Binary Tree node contains following parts:
 * Data
@@ -389,7 +414,7 @@ class Node
 
 
 
-### 16. Algorithm Analysis
+### 17. Algorithm Analysis
 An algorithm is a finite sequence of logically related instructions to solve a computational problem.
 #### Types of Algorithm
 * Iterative 
