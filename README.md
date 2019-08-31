@@ -210,7 +210,7 @@ public class Hello{
 }
 
 
-import myPackage.MyClass;
+import myPackage.Hello;
 public class PrintName 
 {
    public static void main(String args[]) 
