@@ -14,11 +14,12 @@ A beginner's guide to getting started with Data Structures and Algorithms with J
 * [Garbage Collector](#10-garbage-collector)
 * [Data Types](#11-data-types)
 * [Variables](#12-variables)
-* [String Manipulation](#13-string-manipulation)
-* [Arrays](#14-arrays)
-* [ArrayList](#15-arraylist)
-* [Binary Tree](#16-binary-tree)
-* [Algorithm Analysis](#17-algorithm-analysis)
+* [Packages](#13-packages)
+* [String Manipulation](#14-string-manipulation)
+* [Arrays](#15-arrays)
+* [ArrayList](#16-arraylist)
+* [Binary Tree](#17-binary-tree)
+* [Algorithm Analysis](#18-algorithm-analysis)
 
 <br>
 
@@ -68,7 +69,7 @@ develop productive logic, which means more emphasis is given on data.
 
 * Class : It is a group of similar types of Objects which possess same attributes and behaviour. (Object factory / User-Desined datatype)
 * Object :It is a uniques entity that contains data and functions (characteristics and behaviour) toghether in an OOP.
-* Data Abstraction : Act ofrepresenting essential features without including the background details
+* Data Abstraction : Act of representing essential features without including the background details
 * Encapsulation : The wrapping of data and functions, toghether in a single unit.
 * Data Hiding : The data which cannot be accessed directly outside class premise, although they are in same class
 * Dynamic Binding : The process of linking function call to function signature
@@ -186,9 +187,46 @@ There are three types of variables in Java:
 	* Static variables are created at the start of program execution and destroyed automatically when execution ends.
 	* Initilisation of Static Variable is not Mandatory. Its default value is 0
 	
-  
+	
+### 13. Packages
+A mechamism of encapsulating a group of classes, interfaces or sub-packages
+#### Types of Packages
+* Built-in
+	* java.lang
+	* java.io
+	* java.util
+	* java.applet
+	* java.awt
+	* java.net
+	
+* User-Defined
+```
+package myPackage;
+public class Hello{
+	public void getNames(String s)
+	{        
+        	System.out.println(s);        
+	}
+}
 
-### 13. String Manipulation
+
+import myPackage.MyClass;
+public class PrintName 
+{
+   public static void main(String args[]) 
+   {       
+       
+      String name = "Welcome to JAVA";
+      Hello obj = new Hello();
+      
+      obj.getNames(name);
+   }
+}
+```
+
+	
+
+### 14. String Manipulation
 
 #### Built-in Character methods
 
@@ -252,7 +290,7 @@ String str = Integer.toString(n);
 ```
 
 
-### 14. Arrays
+### 15. Arrays
 
 An array is a group of like-typed variables that are referred to by a common name
 The direct superclass of an array type is Object.
@@ -335,7 +373,7 @@ class Test
 ```
 
 
-### 15. ArrayList
+### 16. ArrayList
 
 Java ArrayList class uses a dynamic array for storing the elements. It inherits AbstractList class and implements List interface. The List interface extends Collection and Iterable interfaces in hierarchical order.
 
@@ -388,7 +426,7 @@ list.forEach(lists -> {
 * ArrayList.sort()
 
 
-### 16. Binary Tree
+### 17. Binary Tree
 A tree whose elements have at most 2 children is called a binary tree. Since each element in a binary tree can have only 2 children, we typically name them the left and right child.
 A Binary Tree node contains following parts:
 * Data
@@ -414,7 +452,7 @@ class Node
 
 
 
-### 17. Algorithm Analysis
+### 18. Algorithm Analysis
 An algorithm is a finite sequence of logically related instructions to solve a computational problem.
 #### Types of Algorithm
 * Iterative 
