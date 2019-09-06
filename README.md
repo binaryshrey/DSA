@@ -31,7 +31,7 @@ $ java -version
 ```
 
 ### 2. Hello World
-```Java
+```
 import java.util.*;
 import java.lang.*;
 import java.io.*;
