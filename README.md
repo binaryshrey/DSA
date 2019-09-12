@@ -83,6 +83,8 @@ develop productive logic, which means more emphasis is given on data.
 * Platform independent
 * Multi-threaded
 * Case-sensitive
+* Architecture-neutral
+
 
 ### 6. Byte-Code
 The conversion of HLL to MLL can be done in two ways
