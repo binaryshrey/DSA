@@ -20,7 +20,7 @@ A beginner's guide to getting started with Data Structures and Algorithms with J
 * [ArrayList](#16-arraylist)
 * [Binary Tree](#17-binary-tree)
 * [Algorithm Analysis](#18-algorithm-analysis)
-
+* [Formatted Output](#19-formatted-ouput)
 <br>
 
 ### 1. Installation
@@ -574,3 +574,59 @@ for (int i = n; i > 1; i = fun(i)) {
 }
 ```
 
+### 19. Formatted Output
+#### Formatting output using System.out.printf()
+```
+class Format
+{ 
+  public static void main(String args[]) 
+  { 
+    int x = 100; 
+    System.out.printf("%d\n", x); 		//100
+  
+    // this will print it upto 2 decimal places 
+    System.out.printf("%.2f\n", Math.PI); 	//3.14
+  
+    float n = 5.2f; 
+  
+    // automatically appends zero to the rightmost part of decimal 
+    System.out.printf("%.4f\n", n); 		//5.2000
+  } 
+} 
+```
+
+#### Formatting using DecimalFormat class
+```
+import java.text.DecimalFormat; 
+  
+class Format
+{ 
+  public static void main(String args[]) 
+  { 
+    double num = 123.4567; 
+  
+    // prints only numeric part of a floating number 
+    DecimalFormat ft = new DecimalFormat("####"); 
+    System.out.println(ft.format(num)); 		//123
+  
+    // this will print it upto 2 decimal places 
+    ft = new DecimalFormat("#.##"); 
+    System.out.println(ft.format(num)); 		//123.45
+  
+    // automatically appends zero to the rightmost part of decimal 
+    // instead of #,we use digit 0 
+    ft = new DecimalFormat("#.000000"); 
+    System.out.println(ft.format(num)); 		//123.456700
+  
+    // automatically appends zero to the leftmost of decimal number 
+    // instead of #,we use digit 0 
+    ft = new DecimalFormat("00000.00"); 
+    System.out.println(ft.format(num)); 		//00123.45
+  
+    // formatting money in dollars 
+    double income = 23456.789; 
+    ft = new DecimalFormat("$###,###.##"); 
+    System.out.println(ft.format(income)); 		//$23,456.79
+  } 
+} 
+```
