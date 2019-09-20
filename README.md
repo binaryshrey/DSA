@@ -19,8 +19,9 @@ A beginner's guide to getting started with Data Structures and Algorithms with J
 * [Arrays](#15-arrays)
 * [ArrayList](#16-arraylist)
 * [Binary Tree](#17-binary-tree)
-* [Algorithm Analysis](#18-algorithm-analysis)
-* [Formatted Output](#19-formatted-ouput)
+* [Graphs](#18-graphs)
+* [Algorithm Analysis](#19-algorithm-analysis)
+* [Formatted Output](#20-formatted-ouput)
 <br>
 
 ### 1. Installation
@@ -451,10 +452,10 @@ class Node
     } 
 } 
 ```
+### 18. Graphs
 
 
-
-### 18. Algorithm Analysis
+### 19. Algorithm Analysis
 An algorithm is a finite sequence of logically related instructions to solve a computational problem.
 #### Types of Algorithm
 * Iterative 
@@ -574,7 +575,7 @@ for (int i = n; i > 1; i = fun(i)) {
 }
 ```
 
-### 19. Formatted Output
+### 20. Formatted Output
 #### Formatting output using System.out.printf()
 ```
 class Format
