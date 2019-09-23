@@ -453,6 +453,10 @@ class Node
 } 
 ```
 ### 18. Graphs
+* Non-linear data structure. 
+* A graph G is a set of ordered pair of Vertices V and a set of ordered pair of Edges E , G = (V,E)
+
+
 
 
 ### 19. Algorithm Analysis
