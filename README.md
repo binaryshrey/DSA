@@ -748,4 +748,74 @@ public class TestJavaCollection4{
 }  
 ````
 
+### 23. Queue Interface
+
+Queue interface maintains the first-in-first-out order. It can be defined as an ordered list that is used to hold the elements which are about to be processed. There are various classes like PriorityQueue, Deque, and ArrayDeque which implements the Queue interface.
+
+````
+Queue<String> q1 = new PriorityQueue();  
+Queue<String> q2 = new ArrayDeque();  
+````
+
+#### Priority Queue
+The PriorityQueue class implements the Queue interface. It holds the elements or objects which are to be processed by their priorities. PriorityQueue doesn't allow null values to be stored in the queue.
+````
+import java.util.*;  
+public class TestJavaCollection5{  
+	public static void main(String args[]){  
+		PriorityQueue<String> queue=new PriorityQueue<String>();  
+		queue.add("Amit Sharma");  
+		queue.add("Vijay Raj");  
+		queue.add("JaiShankar");  
+		queue.add("Raj");  
+		System.out.println("head:"+queue.element());  
+		System.out.println("head:"+queue.peek());  
+		System.out.println("iterating the queue elements:");  
+		Iterator itr=queue.iterator();  
+		while(itr.hasNext()){  
+		System.out.println(itr.next());  
+		}  
+		queue.remove();  
+		queue.poll();  
+		System.out.println("after removing two elements:");  
+		Iterator<String> itr2=queue.iterator();  
+		while(itr2.hasNext()){  
+		System.out.println(itr2.next());  
+		}  
+	}  
+}  
+````
+
+### 23. Set Interface
+
+Set Interface in Java is present in java.util package. It extends the Collection interface. It represents the unordered set of elements which doesn't allow us to store the duplicate items. We can store at most one null value in Set. Set is implemented by HashSet, LinkedHashSet, and TreeSet.
+
+````
+Set<data-type> s1 = new HashSet<data-type>();  
+Set<data-type> s2 = new LinkedHashSet<data-type>();  
+Set<data-type> s3 = new TreeSet<data-type>();  
+````
+
+#### HashSet
+HashSet class implements Set Interface. It represents the collection that uses a hash table for storage. Hashing is used to store the elements in the HashSet. It contains unique items.
+
+
+````
+import java.util.*;  
+public class TestJavaCollection7{  
+	public static void main(String args[]){  
+		//Creating HashSet and adding elements  
+		HashSet<String> set=new HashSet<String>();  
+		set.add("Ravi");  
+		set.add("Vijay");  
+		set.add("Ravi");  
+		set.add("Ajay");  
+		//Traversing elements  
+		Iterator<String> itr=set.iterator();  
+		while(itr.hasNext()){  
+			System.out.println(itr.next());  
+		}  
+	}  
+}  
+````
 
