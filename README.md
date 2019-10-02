@@ -17,11 +17,16 @@ A beginner's guide to getting started with Data Structures and Algorithms with J
 * [Packages](#13-packages)
 * [String Manipulation](#14-string-manipulation)
 * [Arrays](#15-arrays)
-* [ArrayList](#16-arraylist)
-* [Binary Tree](#17-binary-tree)
-* [Graphs](#18-graphs)
-* [Algorithm Analysis](#19-algorithm-analysis)
-* [Formatted Output](#20-formatted-ouput)
+* [Binary Tree](#16-binary-tree)
+* [Graphs](#17-graphs)
+* [Algorithm Analysis](#18-algorithm-analysis)
+* [Formatted Output](#19-formatted-ouput)
+* [Iterators](#20-iterator)
+* [Collections in JAVA](#21-collections-in-java)
+* [List Interface](#22-list-interface)
+* [Queue Interface](#23-queue-interface)
+* [Set Interface](#24-set-interface)
+
 <br>
 
 ### 1. Installation
@@ -376,59 +381,6 @@ class Test
 ```
 
 
-### 16. ArrayList
-
-Java ArrayList class uses a dynamic array for storing the elements. It inherits AbstractList class and implements List interface. The List interface extends Collection and Iterable interfaces in hierarchical order.
-
-#### Declaration
-````
-ArrayList<Integer> list = new ArrayList<Integer>();	//variable size
-ArrayList<Boolean> list = new ArrayList<Boolean>(10);	//fixed size
-ArrayList<String>  list = new ArrayList<String>();
-````
-	
-#### Methods 
-* add(Object o): This method is used to append a specificd element to the end of a list.
-* addAll(int index, Collection C): Used to insert all of the elements starting at the specified position from a specific collection into the mentioned list.
-* remove(int index): Removes the element at the specified position in this list.
-* removeAll(Collection c): Removes from this list all of its elements that are contained in the specified collection
-* retainAll(Collection c): Retains only the elements in this list that are contained in the specified collection.
-* contains(Object o): Returns true if this list contains the specified element.
-* set(int index, E element): Replaces the element at the specified position in this list with the specified element.
-* isEmpty(): Returns true if this list contains no elements.
-* size(): Returns the number of elements in this list.
-* get(int index): Returns the element at the specified position in this list.
-* indexOf(Object O): The index the first occurrence of a specific element is either returned, or -1 in case the element is not in the list.
-* lastIndexOf(Object O): The index the last occurrence of a specific element is either returned, or -1 in case the element is not in the list.
-* clear(): This method is used to remove all the elements from any list.
-
-#### Iterating over ArrayList
-* for loop
-```
-ArrayList<Integer> list = new ArrayList<Integer>(5);
-for(int i=0;i<list.size();i++){
-	System.out.println(list.get(i));
-}
-```
-
-* forEach
-```
-ArayList<Integer> list = new ArrayList<Integer>(5);
-list.forEach(lists -> {
-	System.out.println(lists);
-})
-````
-
-#### Searching
-* contains(Object o): Returns true if this list contains the specified element.
-* indexOf(Object O): The index the first occurrence of a specific element is either returned, or -1 in case the element is not in the list.
-* lastIndexOf(Object O): The index the last occurrence of a specific element is either returned, or -1 in case the element is not in the list.
-
-#### Sorting
-* Collections.sort()
-* ArrayList.sort()
-
-
 ### 17. Binary Tree
 A tree whose elements have at most 2 children is called a binary tree. Since each element in a binary tree can have only 2 children, we typically name them the left and right child.
 A Binary Tree node contains following parts:
@@ -635,3 +587,165 @@ class Format
   } 
 } 
 ```
+### 20. Iterator
+#### Iterator
+‘Iterator’ is an interface which belongs to collection framework. It allows us to traverse the collection in forward direction, access the data element and remove the data elements of the collection.
+* hasNext()
+* next()
+* remove()
+```
+ArrayList<String> list = new ArrayList<String>(); 
+Iterator<String> i = list.iterator(); 
+```
+
+#### ListIterator
+‘ListIterator’ in Java is an Iterator which allows users to traverse Collection in both direction. It contains the following methods :
+* hasNext( )
+* Next()
+* hasPrevious()
+* Previous()
+* remove()
+
+
+
+### 21. Collections in JAVA
+The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.Java Collections can achieve all the operations that you perform on a data such as searching, sorting, insertion, manipulation, and deletion.
+Java Collection framework provides many interfaces (Set, List, Queue, Deque) and classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet).
+
+
+
+
+
+
+
+
+### 22. List Interface
+
+List interface is the child interface of Collection interface. It inhibits a list type data structure in which we can store the ordered collection of objects. It can have duplicate values.
+
+List interface is implemented by the classes ArrayList, LinkedList, Vector, and Stack.
+````
+List <data-type> list1= new ArrayList();  
+List <data-type> list2 = new LinkedList();  
+List <data-type> list3 = new Vector();  
+List <data-type> list4 = new Stack();  
+````
+
+
+#### ArrayList
+
+Java ArrayList class uses a dynamic array for storing the elements. It inherits AbstractList class and implements List interface. The List interface extends Collection and Iterable interfaces in hierarchical order.
+
+#### Declaration
+````
+ArrayList<Integer> list = new ArrayList<Integer>();	//variable size
+ArrayList<Boolean> list = new ArrayList<Boolean>(10);	//fixed size
+ArrayList<String>  list = new ArrayList<String>();
+````
+	
+#### Methods 
+* add(Object o): This method is used to append a specificd element to the end of a list.
+* addAll(int index, Collection C): Used to insert all of the elements starting at the specified position from a specific collection into the mentioned list.
+* remove(int index): Removes the element at the specified position in this list.
+* removeAll(Collection c): Removes from this list all of its elements that are contained in the specified collection
+* retainAll(Collection c): Retains only the elements in this list that are contained in the specified collection.
+* contains(Object o): Returns true if this list contains the specified element.
+* set(int index, E element): Replaces the element at the specified position in this list with the specified element.
+* isEmpty(): Returns true if this list contains no elements.
+* size(): Returns the number of elements in this list.
+* get(int index): Returns the element at the specified position in this list.
+* indexOf(Object O): The index the first occurrence of a specific element is either returned, or -1 in case the element is not in the list.
+* lastIndexOf(Object O): The index the last occurrence of a specific element is either returned, or -1 in case the element is not in the list.
+* clear(): This method is used to remove all the elements from any list.
+
+#### Iterating over ArrayList
+* for loop
+```
+ArrayList<Integer> list = new ArrayList<Integer>(5);
+for(int i=0;i<list.size();i++){
+	System.out.println(list.get(i));
+}
+```
+
+* forEach
+```
+ArayList<Integer> list = new ArrayList<Integer>(5);
+list.forEach(lists -> {
+	System.out.println(lists);
+})
+````
+
+#### Searching
+* contains(Object o): Returns true if this list contains the specified element.
+* indexOf(Object O): The index the first occurrence of a specific element is either returned, or -1 in case the element is not in the list.
+* lastIndexOf(Object O): The index the last occurrence of a specific element is either returned, or -1 in case the element is not in the list.
+
+#### Sorting
+* Collections.sort()
+* ArrayList.sort()
+
+
+#### LinkedList
+LinkedList implements the Collection interface. It uses a doubly linked list internally to store the elements. It can store the duplicate elements.
+It maintains the insertion order and is not synchronized.
+````
+import java.util.*;  
+public class TestJavaCollection2{  
+	public static void main(String args[]){  
+	LinkedList<String> al=new LinkedList<String>();  
+	al.add("Ravi");  
+	al.add("Vijay");  
+	al.add("Ravi");  
+	al.add("Ajay");  
+	Iterator<String> itr=al.iterator();  
+	while(itr.hasNext()){  
+		System.out.println(itr.next());  
+	}  
+	}  
+}  
+````
+
+#### Vector
+Vector uses a dynamic array to store the data elements. It is similar to ArrayList. However, It is synchronized and contains many methods that are not the part of Collection framework.
+
+````
+import java.util.*;  
+	public class TestJavaCollection3{  
+	public static void main(String args[]){  
+	Vector<String> v=new Vector<String>();  
+	v.add("Ayush");  
+	v.add("Amit");  
+	v.add("Ashish");  
+	v.add("Garima");  
+	Iterator<String> itr=v.iterator();  
+	while(itr.hasNext()){  
+		System.out.println(itr.next());  
+	}  
+	}  
+}  
+````
+
+#### Stack
+
+The stack is the subclass of Vector. It implements the last-in-first-out data structure, i.e., Stack. The stack contains all of the methods of Vector class and also provides its methods like boolean push(), boolean peek(), boolean push(object o), which defines its properties.
+
+````
+import java.util.*;  
+public class TestJavaCollection4{  
+	public static void main(String args[]){  
+	Stack<String> stack = new Stack<String>();  
+	stack.push("Ayush");  
+	stack.push("Garvit");  
+	stack.push("Amit");  
+	stack.push("Ashish");  
+	stack.push("Garima");  
+	stack.pop();  
+	Iterator<String> itr=stack.iterator();  
+	while(itr.hasNext()){  
+		System.out.println(itr.next());  
+	}  
+	}  
+}  
+````
+
+
