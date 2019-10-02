@@ -381,7 +381,7 @@ class Test
 ```
 
 
-### 17. Binary Tree
+### 16. Binary Tree
 A tree whose elements have at most 2 children is called a binary tree. Since each element in a binary tree can have only 2 children, we typically name them the left and right child.
 A Binary Tree node contains following parts:
 * Data
@@ -404,14 +404,14 @@ class Node
     } 
 } 
 ```
-### 18. Graphs
+### 17. Graphs
 * Non-linear data structure. 
 * A graph G is a set of ordered pair of Vertices V and a set of ordered pair of Edges E , G = (V,E)
 
 
 
 
-### 19. Algorithm Analysis
+### 18. Algorithm Analysis
 An algorithm is a finite sequence of logically related instructions to solve a computational problem.
 #### Types of Algorithm
 * Iterative 
@@ -531,7 +531,7 @@ for (int i = n; i > 1; i = fun(i)) {
 }
 ```
 
-### 20. Formatted Output
+### 19. Formatted Output
 #### Formatting output using System.out.printf()
 ```
 class Format
