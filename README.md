@@ -21,7 +21,7 @@ A beginner's guide to getting started with Data Structures and Algorithms with J
 * [Graphs](#17-graphs)
 * [Algorithm Analysis](#18-algorithm-analysis)
 * [Formatted Output](#19-formatted-ouput)
-* [Iterators](#20-iterator)
+* [Iterators](#20-iterators)
 * [Collections in JAVA](#21-collections-in-java)
 * [List Interface](#22-list-interface)
 * [Queue Interface](#23-queue-interface)
@@ -786,7 +786,7 @@ public class TestJavaCollection5{
 }  
 ````
 
-### 23. Set Interface
+### 24. Set Interface
 
 Set Interface in Java is present in java.util package. It extends the Collection interface. It represents the unordered set of elements which doesn't allow us to store the duplicate items. We can store at most one null value in Set. Set is implemented by HashSet, LinkedHashSet, and TreeSet.
 
