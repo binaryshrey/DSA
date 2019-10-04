@@ -704,6 +704,35 @@ public class TestJavaCollection2{
 	}  
 }  
 ````
+```
+LinkedList<String> object = new LinkedList<String>(); 
+```
+* object.size(); 
+* object.get(2); 
+
+* object.add("A");
+* object.add(2, "E"); 
+* object.addLast("C"); 
+* object.addFirst("D"); 
+
+* object.remove(3); 
+* object.removeFirst(); 
+* object.removeLast(); 
+* object.removeFirstOccurrence​('E')
+
+* object.set(2.'E');  // replace
+* object.contains("E"); 
+
+* object.toArray();
+
+* clear();
+* clone(); 
+* indexOf(Object o): 
+* lastIndexOf(Object o): 
+* pollFirst():
+* pollLast():
+
+
 
 #### Vector
 Vector uses a dynamic array to store the data elements. It is similar to ArrayList. However, It is synchronized and contains many methods that are not the part of Collection framework.
@@ -724,6 +753,9 @@ import java.util.*;
 	}  
 }  
 ````
+
+
+
 
 #### Stack
 
