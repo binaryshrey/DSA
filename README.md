@@ -26,6 +26,7 @@ A beginner's guide to getting started with Data Structures and Algorithms with J
 * [List Interface](#22-list-interface)
 * [Queue Interface](#23-queue-interface)
 * [Set Interface](#24-set-interface)
+* [Important Collections](#25-important-collections)
 
 <br>
 
@@ -850,4 +851,139 @@ public class TestJavaCollection7{
 	}  
 }  
 ````
+
+### 25. Important Collections
+
+#### 1. HashSet
+
+* HashSet stores the elements by using a mechanism called hashing.
+* HashSet contains unique elements only.
+* HashSet allows null value.
+* HashSet class is non synchronized.
+* HashSet doesn't maintain the insertion order. Here, elements are inserted on the basis of their hashcode.
+* HashSet is the best approach for search operations.
+* The initial default capacity of HashSet is 16, and the load factor is 0.75.
+````
+  HashSet<String> set=new HashSet();  
+       set.add("One");    
+       set.add("Two");    
+       set.add("Three");   
+       set.add("Four");  
+       set.add("Five");  
+       Iterator<String> i=set.iterator();  
+       while(i.hasNext())  
+       {  
+       	 System.out.println(i.next());  
+       }  
+````
+* set.add("hello")
+* set.remove("one")
+* set.size()
+* set.clear()
+* set.isEmpty()
+* set.contains("two")
+* set.Iterator iterator()
+* set.clone()
+
+#### 2. HashMap
+
+* HashMap class contains values based on the key.
+* HashMap class contains only unique keys.
+* HashMap class may have one null key and multiple null values.
+* HashMap class is non synchronized.
+* HashMap class maintains no order.
+* The initial default capacity of Java HashMap class is 16 with a load factor of 0.75.
+
+````
+import java.util.*;  
+class HashMap1{  
+ public static void main(String args[]){  
+   HashMap<Integer,String> hm=new HashMap<Integer,String>();    
+    System.out.println("Initial list of elements: "+hm);  
+      hm.put(100,"Amit");    
+      hm.put(101,"Vijay");    
+      hm.put(102,"Rahul");   
+       
+      System.out.println("After invoking put() method ");  
+      for(Map.Entry m:hm.entrySet()){    
+       System.out.println(m.getKey()+" "+m.getValue());    
+      }  
+        
+      hm.putIfAbsent(103, "Gaurav");  
+      System.out.println("After invoking putIfAbsent() method ");  
+      for(Map.Entry m:hm.entrySet()){    
+           System.out.println(m.getKey()+" "+m.getValue());    
+          }  
+      HashMap<Integer,String> map=new HashMap<Integer,String>();  
+      map.put(104,"Ravi");  
+      map.putAll(hm);  
+      System.out.println("After invoking putAll() method ");  
+      for(Map.Entry m:map.entrySet()){    
+           System.out.println(m.getKey()+" "+m.getValue());    
+          }  
+ }  
+}  
+````
+
+
+* void clear(): Used to remove all mappings from a map.
+* boolean containsKey(Object key): Used to return True if for a specified key, mapping is present in the map.
+* boolean containsValue(Object value): Used to return true if one or more key is mapped to a specified value.
+* Object clone(): It is used to return a shallow copy of the mentioned hash map.
+* boolean isEmpty(): Used to check whether the map is empty or not. Returns true if the map is empty.
+* Set entrySet(): It is used to return a set view of the hash map.
+* Object get(Object key): It is used to retrieve or fetch the value mapped by a particular key.
+* Set keySet(): It is used to return a set view of the keys.
+* int size(): It is used to return the size of a map.
+* Object put(Object key, Object value): It is used to insert a particular mapping of key-value pair into a map.
+* putAll(Map M): It is used to copy all of the elements from one map into another.
+* Object remove(Object key): It is used to remove the values for any particular key in the Map.
+* Collection values(): It is used to return a Collection view of the values in the HashMap.
+* compute(K key, BiFunction<K, V> remappingFunction): This method Attempts to compute a mapping for the specified key and its * current mapped value (or null if there is no current mapping).
+* computeIfAbsent(K key, Function<K> mappingFunction): This method If the specified key is not already associated with a value (or is mapped to null), attempts to compute its value using the given mapping function and enters it into this map unless null.
+* computeIfPresent(K key, BiFunction<K, V> remappingFunction): This method If the value for the specified key is present and non-null, attempts to compute a new mapping given the key and its current mapped value.
+* forEach(BiConsumer<K, V> action): This method Performs the given action for each entry in this map until all entries have been processed or the action throws an exception.
+* getOrDefault(Object key, V defaultValue): This method returns the value to which the specified key is mapped, or defaultValue if this map contains no mapping for t/he key.
+* merge(K key, V value, BiFunction<K, V> remappingFunction): This method If the specified key is not already associated with a value or is associated with null, associates it with the given non-null value.
+* putIfAbsent(K key, V value): This method If the specified key is not already associated with a value (or is mapped to null) associates it with the given value and returns null, else returns the current value.
+* replace(K key, V value): This method replaces the entry for the specified key only if it is currently mapped to some value.
+* replace(K key, V oldValue, V newValue): This method replaces the entry for the specified key only if currently mapped to the specified value.
+* replaceAll(BiFunction<K, V> function): This method replaces each entry’s value with the result of invoking the given function on that entry until all entries have been processed or the function throws an exception.
+
+
+#### 3. LinkedHashMap
+Java LinkedHashMap contains values based on the key.
+Java LinkedHashMap contains unique elements.
+Java LinkedHashMap may have one null key and multiple null values.
+Java LinkedHashMap is non synchronized.
+Java LinkedHashMap maintains insertion order.
+The initial default capacity of Java HashMap class is 16 with a load factor of 0.75.
+
+````
+import java.util.*;  
+public class LinkedHashMap3 {  
+   public static void main(String args[]) {  
+    Map<Integer,String> map=new LinkedHashMap<Integer,String>();        
+     map.put(101,"Amit");    
+     map.put(102,"Vijay");    
+     map.put(103,"Rahul");    
+     System.out.println("Before invoking remove() method: "+map);     
+    map.remove(102);  
+    System.out.println("After invoking remove() method: "+map);    
+   }      
+}  
+````
+
+* void clear(): This method is used to remove all the mappings from the map.
+* boolean containsKey(Object key): This method is used to returns true if a specified element is mapped by one or more keys.
+* Object get(Object key): The method is used to retrieve or fetch the value mapped by the specified key.
+* protected boolean removeEldestEntry(Map.Entry eldest): The method is used to return true when the map removes its eldest entry from the map.
+* entrySet​(): This method returns a Set view of the mappings contained in this map.
+* forEach​(BiConsumer<K,V> action): This method Performs the given action for each entry in this map until all entries have been processed or the action throws an exception.
+* getOrDefault​(Object key, V defaultValue): This method returns the value to which the specified key is mapped, or defaultValue if this map contains no mapping for the key.
+* keySet​(): This method returns a Set view of the keys contained in this map.
+removeEldestEntry​(Map.Entry<K,V> eldest): This method returns true if this map should remove its eldest entry.
+* replaceAll​(BiFunction<K,V> function): This method replaces each entry’s value with the result of invoking the given function on that entry until all entries have been processed or the function throws an exception.
+* values​(): This method returns a Collection view of the values contained in this map.
+
 
