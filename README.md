@@ -725,12 +725,12 @@ LinkedList<String> object = new LinkedList<String>();
 
 * object.toArray();
 
-* clear();
-* clone(); 
-* indexOf(Object o): 
-* lastIndexOf(Object o): 
-* pollFirst():
-* pollLast():
+* object.clear();
+* object.clone(); 
+* object.indexOf(Object o): 
+* object.lastIndexOf(Object o): 
+* object.pollFirst():
+* object.pollLast():
 
 
 
