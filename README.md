@@ -244,8 +244,8 @@ public class PrintName
 * Character.isLetterorDigit()
 * Character.isWhiteSpace()
 * Character.isUpperCase()
+* Character.toUpperCase()
 * Character.isLowerCase()
-* Character.toLowerCase()
 * Character.toLowerCase()
 * Character.getNumericValue()
 
