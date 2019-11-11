@@ -91,6 +91,7 @@ develop productive logic, which means more emphasis is given on data.
 * Multi-threaded
 * Case-sensitive
 * Architecture-neutral
+* Robust and Secure
 
 
 ### 6. Byte-Code
