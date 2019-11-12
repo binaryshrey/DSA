@@ -947,7 +947,6 @@ class HashMap1{
 * getOrDefault(Object key, V defaultValue): This method returns the value to which the specified key is mapped, or defaultValue if this map contains no mapping for t/he key.
 * merge(K key, V value, BiFunction<K, V> remappingFunction): This method If the specified key is not already associated with a value or is associated with null, associates it with the given non-null value.
 * putIfAbsent(K key, V value): This method If the specified key is not already associated with a value (or is mapped to null) associates it with the given value and returns null, else returns the current value.
-* replace(K key, V value): This method replaces the entry for the specified key only if it is currently mapped to some value.
 * replace(K key, V oldValue, V newValue): This method replaces the entry for the specified key only if currently mapped to the specified value.
 * replaceAll(BiFunction<K, V> function): This method replaces each entry’s value with the result of invoking the given function on that entry until all entries have been processed or the function throws an exception.
 
