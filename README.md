@@ -410,6 +410,9 @@ class Node
 * Non-linear data structure. 
 * A graph G is a set of ordered pair of Vertices V and a set of ordered pair of Edges E , G = (V,E)
 
+Following two are the most commonly used representations of a graph.
+1. Adjacency Matrix
+2. Adjacency List
 
 
 
