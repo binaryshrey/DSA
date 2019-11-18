@@ -944,7 +944,6 @@ class HashMap1{
 * Collection values(): It is used to return a Collection view of the values in the HashMap.
 * compute(K key, BiFunction<K, V> remappingFunction): This method Attempts to compute a mapping for the specified key and its * current mapped value (or null if there is no current mapping).
 * computeIfAbsent(K key, Function<K> mappingFunction): This method If the specified key is not already associated with a value (or is mapped to null), attempts to compute its value using the given mapping function and enters it into this map unless null.
-* computeIfPresent(K key, BiFunction<K, V> remappingFunction): This method If the value for the specified key is present and non-null, attempts to compute a new mapping given the key and its current mapped value.
 * forEach(BiConsumer<K, V> action): This method Performs the given action for each entry in this map until all entries have been processed or the action throws an exception.
 * getOrDefault(Object key, V defaultValue): This method returns the value to which the specified key is mapped, or defaultValue if this map contains no mapping for t/he key.
 * merge(K key, V value, BiFunction<K, V> remappingFunction): This method If the specified key is not already associated with a value or is associated with null, associates it with the given non-null value.
