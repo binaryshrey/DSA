@@ -866,6 +866,7 @@ public class TestJavaCollection7{
 * HashSet doesn't maintain the insertion order. Here, elements are inserted on the basis of their hashcode.
 * HashSet is the best approach for search operations.
 * The initial default capacity of HashSet is 16, and the load factor is 0.75.
+* HashSet implements Set Interface.
 ````
   HashSet<String> set=new HashSet();  
        set.add("One");    
