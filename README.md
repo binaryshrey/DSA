@@ -663,6 +663,20 @@ ArrayList<String>  list = new ArrayList<String>();
 * lastIndexOf(Object O): The index the last occurrence of a specific element is either returned, or -1 in case the element is not in the list.
 * clear(): This method is used to remove all the elements from any list.
 
+#### Converting Arrays to ArrayList
+```
+// to check if a array contains a particular value
+
+String[] alphabet = new String[]{"A", "B", "C"};
+ArrayList<String> list = Arrays.asList(alphabet); //Arrays.asList(arr).contains(targetValue)
+	if(list.contains("A")){
+            System.out.println("Hello A");
+        }
+	
+// But, it is advisable to loop over the entire array and check for the target value.
+```
+
+
 #### Iterating over ArrayList
 * for loop
 ```
