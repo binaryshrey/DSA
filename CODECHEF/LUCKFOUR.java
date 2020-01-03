@@ -11,26 +11,18 @@ class Codechef
 	{
 		// your code goes here
 		Scanner sc = new Scanner(System.in);
-		int T=0,n=0,d=0,c=0;
-		if(sc.hasNextInt())
-		    T = sc.nextInt();
-		    
-		if(T>=1 && T<=100000){
-		    
-		    for(int i=1;i<=T;i++){
-		        if(sc.hasNextInt())
-		            n = sc.nextInt();
-		        while(n>0){
-		            d=n%10;
-		            if(d==4)
-		                c++;
-		            n=n/10;
-		        }
-		       
-		        System.out.println(c);
-		        c=0;
+		double T = sc.nextDouble();
+		int d=0,c=0;
+		for(int i=1;i<=T;i++){
+		    double n = sc.nextDouble();
+		    while(n>0){
+		        d = (int)n%10;
+		        if(d==4)
+		            c+=1;
+		        n=n/10;
 		    }
-		    
+		    System.out.println(c);
+		    d=0;c=0;
 		}
 	}
 }
