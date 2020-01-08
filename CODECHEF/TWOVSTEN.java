@@ -11,22 +11,15 @@ class Codechef
 	{
 		// your code goes here
 		Scanner sc = new Scanner(System.in);
-		int T=0,n=0;
-		if(sc.hasNextInt())
-		    T = sc.nextInt();
+		int T = sc.nextInt();
 		for(int i=1;i<=T;i++){
-		    if(sc.hasNextInt())
-		        n = sc.nextInt();
-		    if(n%10==0)
-		        System.out.println("0");
-		    else if(n*2%10==0)
-		        System.out.println("1");
+		    double n = sc.nextDouble();
+		    if((int)n%10==0)
+		        System.out.println(0);
+		    else if((int)n%5==0)
+		        System.out.println(1);
 		    else
-		        System.out.println("-1");
-		        
-		    
-		    
+		        System.out.println(-1);
 		}
-		   
 	}
 }
