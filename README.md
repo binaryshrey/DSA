@@ -27,6 +27,7 @@ A beginner's guide to getting started with Data Structures and Algorithms with J
 * [Queue Interface](#23-queue-interface)
 * [Set Interface](#24-set-interface)
 * [Important Collections](#25-important-collections)
+* [Arrays](#26-arrays)
 
 <br>
 
@@ -1001,5 +1002,80 @@ public class LinkedHashMap3 {
 removeEldestEntry​(Map.Entry<K,V> eldest): This method returns true if this map should remove its eldest entry.
 * replaceAll​(BiFunction<K,V> function): This method replaces each entry’s value with the result of invoking the given function on that entry until all entries have been processed or the function throws an exception.
 * values​(): This method returns a Collection view of the values contained in this map.
+
+
+
+
+
+### 26. Arrays
+
+#### An array is a collection of similar items stored at contiguous memory locations
+
+* Arrays allow random access of elements.
+* Arrays have better cache locality
+* In Java all arrays are dynamically allocated.
+* The direct superclass of an array type is Object. 
+* Every array type implements the interfaces Cloneable and java.io.Serializable.
+
+#### Declaration
+* int[] intArray = new int[20];
+* int[][] intArray = new int[10][20]; 
+* int[] intArray = new int[]{ 1,2,3,4,5,6,7,8,9,10 }; 
+
+#### Returning arrays from methods
+````public static int[] m1()  
+    { 
+        // returning  array 
+        return new int[]{1,2,3}; 
+    } 
+````
+
+#### Cloning of arrays
+* When you clone a single dimensional array, such as Object[], a “deep copy” is performed with the new array containing copies of the original array’s elements as opposed to references. 
+````
+class Test 
+{     
+    public static void main(String args[])  
+    { 
+        int intArray[] = {1,2,3}; 
+          
+        int cloneArray[] = intArray.clone(); 
+          
+        // will print false as deep copy is created 
+        // for one-dimensional array 
+        System.out.println(intArray == cloneArray); 
+          
+        for (int i = 0; i < cloneArray.length; i++) { 
+            System.out.print(cloneArray[i]+" "); 
+        } 
+    } 
+}
+
+* A clone of a multidimensional array (like Object[][]) is a “shallow copy” however, which is to say that it creates only a single new array with each element array a reference to an original element array but subarrays are shared.  
+````
+class Test 
+{     
+    public static void main(String args[])  
+    { 
+        int intArray[][] = {{1,2,3},{4,5}}; 
+          
+        int cloneArray[][] = intArray.clone(); 
+          
+        // will print false 
+        System.out.println(intArray == cloneArray); 
+          
+        // will print true as shallow copy is created 
+        // i.e. sub-arrays are shared 
+        System.out.println(intArray[0] == cloneArray[0]); 
+        System.out.println(intArray[1] == cloneArray[1]); 
+          
+    } 
+} 
+````
+
+#### Commom Problems
+* Array Rotation
+
+
 
 
