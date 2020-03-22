@@ -15,7 +15,7 @@ A beginner's guide to getting started with Data Structures and Algorithms with J
 * [Data Types](#11-data-types)
 * [Variables](#12-variables)
 * [Packages](#13-packages)
-* [Formatted Output](#14-formatted-ouput)
+* [Formatted Output](#14-formatted-output)
 * [String Manipulation](#15-string-manipulation)
 * [Arrays](#16-arrays)
 * [LinkedList](#17-linkedlist)
@@ -23,12 +23,13 @@ A beginner's guide to getting started with Data Structures and Algorithms with J
 * [Queue](#19-queue)
 * [Binary Tree](#20-binary-tree)
 * [Binary Search Tree](#21-binary-search-tree)
-* [Heap](#22-hashing)
+* [Heap](#22-heap)
 * [Hashing](#23-hashing)
 * [Graphs](#24-graphs)
 * [Matrix](#25-matrix)
 * [Advanced DS](#26-advanced-ds)
-* [Algorithm Analysis](#27-algorithm-analysis)
+* [Collections in Java](#27-collections-in-java)
+* [Algorithm Analysis](#28-algorithm-analysis)
 
 
 <br>
@@ -492,8 +493,9 @@ Following two are the most commonly used representations of a graph.
 
 ### 26. Advanced DS
 
+### 27. Collections in Java
 
-### 27. Algorithm Analysis
+### 28. Algorithm Analysis
 An algorithm is a finite sequence of logically related instructions to solve a computational problem.
 #### Types of Algorithm
 * Iterative 
