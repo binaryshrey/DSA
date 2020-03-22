@@ -15,19 +15,21 @@ A beginner's guide to getting started with Data Structures and Algorithms with J
 * [Data Types](#11-data-types)
 * [Variables](#12-variables)
 * [Packages](#13-packages)
-* [String Manipulation](#14-string-manipulation)
-* [Arrays](#15-arrays)
-* [Binary Tree](#16-binary-tree)
-* [Graphs](#17-graphs)
-* [Algorithm Analysis](#18-algorithm-analysis)
-* [Formatted Output](#19-formatted-ouput)
-* [Iterators](#20-iterators)
-* [Collections in JAVA](#21-collections-in-java)
-* [List Interface](#22-list-interface)
-* [Queue Interface](#23-queue-interface)
-* [Set Interface](#24-set-interface)
-* [Important Collections](#25-important-collections)
-* [Arrays](#26-arrays)
+* [Formatted Output](#14-formatted-ouput)
+* [String Manipulation](#15-string-manipulation)
+* [Arrays](#16-arrays)
+* [LinkedList](#17-linkedlist)
+* [Stacks](#18-stacks)
+* [Queue](#19-queue)
+* [Binary Tree](#20-binary-tree)
+* [Binary Search Tree](#21-binary-search-tree)
+* [Heap](#22-hashing)
+* [Hashing](#23-hashing)
+* [Graphs](#24-graphs)
+* [Matrix](#25-matrix)
+* [Advanced DS](#26-advanced-ds)
+* [Algorithm Analysis](#27-algorithm-analysis)
+
 
 <br>
 
@@ -44,7 +46,6 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-/* Name of the class has to be "Main" only if the class is public. */
 class HelloWorld
 {
 	public static void main (String[] args) throws java.lang.Exception
@@ -235,9 +236,65 @@ public class PrintName
 }
 ```
 
+### 19. Formatted Output
+#### Formatting output using System.out.printf()
+```
+class Format
+{ 
+  public static void main(String args[]) 
+  { 
+    int x = 100; 
+    System.out.printf("%d\n", x); 		//100
+  
+    // this will print it upto 2 decimal places 
+    System.out.printf("%.2f\n", Math.PI); 	//3.14
+  
+    float n = 5.2f; 
+  
+    // automatically appends zero to the rightmost part of decimal 
+    System.out.printf("%.4f\n", n); 		//5.2000
+  } 
+} 
+```
+
+#### Formatting using DecimalFormat class
+```
+import java.text.DecimalFormat; 
+  
+class Format
+{ 
+  public static void main(String args[]) 
+  { 
+    double num = 123.4567; 
+  
+    // prints only numeric part of a floating number 
+    DecimalFormat ft = new DecimalFormat("####"); 
+    System.out.println(ft.format(num)); 		//123
+  
+    // this will print it upto 2 decimal places 
+    ft = new DecimalFormat("#.##"); 
+    System.out.println(ft.format(num)); 		//123.45
+  
+    // automatically appends zero to the rightmost part of decimal 
+    // instead of #,we use digit 0 
+    ft = new DecimalFormat("#.000000"); 
+    System.out.println(ft.format(num)); 		//123.456700
+  
+    // automatically appends zero to the leftmost of decimal number 
+    // instead of #,we use digit 0 
+    ft = new DecimalFormat("00000.00"); 
+    System.out.println(ft.format(num)); 		//00123.45
+  
+    // formatting money in dollars 
+    double income = 23456.789; 
+    ft = new DecimalFormat("$###,###.##"); 
+    System.out.println(ft.format(income)); 		//$23,456.79
+  } 
+} 
+```
 	
 
-### 14. String Manipulation
+### 15. String Manipulation
 
 #### Built-in Character methods
 
@@ -301,16 +358,20 @@ String str = Integer.toString(n);
 ```
 
 
-### 15. Arrays
+### 16. Arrays
 
-An array is a group of like-typed variables that are referred to by a common name
-The direct superclass of an array type is Object.
-Every array type implements the interfaces Cloneable and java.io.Serializable.
-```
-int arr[] = new int[10];	//declaring and allocating memory
-int num[] = {1,2,3,4,5};	//storing the data
-Student[] arr = new Student[7]; //Array of Objects - student is a user-defined class
-```
+#### An array is a collection of similar items stored at contiguous memory locations
+
+* Arrays allow random access of elements.
+* Arrays have better cache locality
+* In Java all arrays are dynamically allocated.
+* The direct superclass of an array type is Object. 
+* Every array type implements the interfaces Cloneable and java.io.Serializable.
+
+#### Declaration
+* int[] intArray = new int[20];
+* int[][] intArray = new int[10][20]; 
+* int[] intArray = new int[]{ 1,2,3,4,5,6,7,8,9,10 }; 
 
 #### Passing arrays to Methods
 ```
@@ -383,8 +444,13 @@ class Test
 } 
 ```
 
+### 17. LinkedList
 
-### 16. Binary Tree
+### 18. Stacks
+
+### 19. Queue
+
+### 20. Binary Tree
 A tree whose elements have at most 2 children is called a binary tree. Since each element in a binary tree can have only 2 children, we typically name them the left and right child.
 A Binary Tree node contains following parts:
 * Data
@@ -407,7 +473,14 @@ class Node
     } 
 } 
 ```
-### 17. Graphs
+
+### 21. Binary Search Tree
+
+### 22. Heap
+
+### 23. Hashing
+
+### 24. Graphs
 * Non-linear data structure. 
 * A graph G is a set of ordered pair of Vertices V and a set of ordered pair of Edges E , G = (V,E)
 
@@ -415,9 +488,12 @@ Following two are the most commonly used representations of a graph.
 1. Adjacency Matrix
 2. Adjacency List
 
+### 25. Matrix
+
+### 26. Advanced DS
 
 
-### 18. Algorithm Analysis
+### 27. Algorithm Analysis
 An algorithm is a finite sequence of logically related instructions to solve a computational problem.
 #### Types of Algorithm
 * Iterative 
@@ -536,546 +612,4 @@ for (int i = n; i > 1; i = fun(i)) {
 	// some O(1) expressions
 }
 ```
-
-### 19. Formatted Output
-#### Formatting output using System.out.printf()
-```
-class Format
-{ 
-  public static void main(String args[]) 
-  { 
-    int x = 100; 
-    System.out.printf("%d\n", x); 		//100
-  
-    // this will print it upto 2 decimal places 
-    System.out.printf("%.2f\n", Math.PI); 	//3.14
-  
-    float n = 5.2f; 
-  
-    // automatically appends zero to the rightmost part of decimal 
-    System.out.printf("%.4f\n", n); 		//5.2000
-  } 
-} 
-```
-
-#### Formatting using DecimalFormat class
-```
-import java.text.DecimalFormat; 
-  
-class Format
-{ 
-  public static void main(String args[]) 
-  { 
-    double num = 123.4567; 
-  
-    // prints only numeric part of a floating number 
-    DecimalFormat ft = new DecimalFormat("####"); 
-    System.out.println(ft.format(num)); 		//123
-  
-    // this will print it upto 2 decimal places 
-    ft = new DecimalFormat("#.##"); 
-    System.out.println(ft.format(num)); 		//123.45
-  
-    // automatically appends zero to the rightmost part of decimal 
-    // instead of #,we use digit 0 
-    ft = new DecimalFormat("#.000000"); 
-    System.out.println(ft.format(num)); 		//123.456700
-  
-    // automatically appends zero to the leftmost of decimal number 
-    // instead of #,we use digit 0 
-    ft = new DecimalFormat("00000.00"); 
-    System.out.println(ft.format(num)); 		//00123.45
-  
-    // formatting money in dollars 
-    double income = 23456.789; 
-    ft = new DecimalFormat("$###,###.##"); 
-    System.out.println(ft.format(income)); 		//$23,456.79
-  } 
-} 
-```
-### 20. Iterator
-#### Iterator
-‘Iterator’ is an interface which belongs to collection framework. It allows us to traverse the collection in forward direction, access the data element and remove the data elements of the collection.
-* hasNext()
-* next()
-* remove()
-```
-ArrayList<String> list = new ArrayList<String>(); 
-Iterator<String> i = list.iterator(); 
-```
-
-#### ListIterator
-‘ListIterator’ in Java is an Iterator which allows users to traverse Collection in both direction. It contains the following methods :
-* hasNext( )
-* Next()
-* hasPrevious()
-* Previous()
-* remove()
-
-
-
-### 21. Collections in JAVA
-The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.Java Collections can achieve all the operations that you perform on a data such as searching, sorting, insertion, manipulation, and deletion.
-Java Collection framework provides many interfaces (Set, List, Queue, Deque) and classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet).
-
-
-
-
-
-
-
-
-### 22. List Interface
-
-List interface is the child interface of Collection interface. It inhibits a list type data structure in which we can store the ordered collection of objects. It can have duplicate values.
-
-List interface is implemented by the classes ArrayList, LinkedList, Vector, and Stack.
-````
-List <data-type> list1= new ArrayList();  
-List <data-type> list2 = new LinkedList();  
-List <data-type> list3 = new Vector();  
-List <data-type> list4 = new Stack();  
-````
-
-
-#### ArrayList
-
-Java ArrayList class uses a dynamic array for storing the elements. It inherits AbstractList class and implements List interface. The List interface extends Collection and Iterable interfaces in hierarchical order.
-
-#### Declaration
-````
-ArrayList<Integer> list = new ArrayList<Integer>();	//variable size
-ArrayList<Boolean> list = new ArrayList<Boolean>(10);	//fixed size
-ArrayList<String>  list = new ArrayList<String>();
-````
-	
-#### Methods 
-* add(Object o): This method is used to append a specificd element to the end of a list.
-* addAll(int index, Collection C): Used to insert all of the elements starting at the specified position from a specific collection into the mentioned list.
-* remove(int index): Removes the element at the specified position in this list.
-* removeAll(Collection c): Removes from this list all of its elements that are contained in the specified collection
-* retainAll(Collection c): Retains only the elements in this list that are contained in the specified collection.
-* contains(Object o): Returns true if this list contains the specified element.
-* set(int index, E element): Replaces the element at the specified position in this list with the specified element.
-* isEmpty(): Returns true if this list contains no elements.
-* size(): Returns the number of elements in this list.
-* get(int index): Returns the element at the specified position in this list.
-* indexOf(Object O): The index the first occurrence of a specific element is either returned, or -1 in case the element is not in the list.
-* lastIndexOf(Object O): The index the last occurrence of a specific element is either returned, or -1 in case the element is not in the list.
-* clear(): This method is used to remove all the elements from any list.
-
-#### Converting Arrays to ArrayList
-```
-// to check if a array contains a particular value
-
-String[] alphabet = new String[]{"A", "B", "C"};
-ArrayList<String> list = Arrays.asList(alphabet); //Arrays.asList(arr).contains(targetValue)
-	if(list.contains("A")){
-            System.out.println("Hello A");
-        }
-	
-// But, it is advisable to loop over the entire array and check for the target value.
-```
-
-
-#### Iterating over ArrayList
-* for loop
-```
-ArrayList<Integer> list = new ArrayList<Integer>(5);
-for(int i=0;i<list.size();i++){
-	System.out.println(list.get(i));
-}
-```
-
-* forEach
-```
-ArayList<Integer> list = new ArrayList<Integer>(5);
-list.forEach(lists -> {
-	System.out.println(lists);
-})
-````
-
-#### Searching
-* contains(Object o): Returns true if this list contains the specified element.
-* indexOf(Object O): The index the first occurrence of a specific element is either returned, or -1 in case the element is not in the list.
-* lastIndexOf(Object O): The index the last occurrence of a specific element is either returned, or -1 in case the element is not in the list.
-
-#### Sorting
-* Collections.sort()
-* ArrayList.sort()
-
-
-#### LinkedList
-LinkedList implements the Collection interface. It uses a doubly linked list internally to store the elements. It can store the duplicate elements.
-It maintains the insertion order and is not synchronized.
-````
-import java.util.*;  
-public class TestJavaCollection2{  
-	public static void main(String args[]){  
-	LinkedList<String> al=new LinkedList<String>();  
-	al.add("Ravi");  
-	al.add("Vijay");  
-	al.add("Ravi");  
-	Iterator<String> itr=al.iterator();  
-	while(itr.hasNext()){  
-		System.out.println(itr.next());  
-	}  
-	}  
-}  
-````
-```
-LinkedList<String> object = new LinkedList<String>(); 
-```
-* object.size(); 
-* object.get(2); 
-
-* object.add("A");
-* object.add(2, "E"); 
-* object.addLast("C"); 
-* object.addFirst("D"); 
-
-* object.remove(3); 
-* object.removeFirst(); 
-* object.removeLast(); 
-* object.removeFirstOccurrence​('E')
-
-* object.set(2.'E');  // replace
-* object.contains("E"); 
-
-* object.toArray();
-
-* object.clear();
-* object.clone(); 
-* object.indexOf(Object o): 
-* object.lastIndexOf(Object o): 
-* object.pollFirst():
-* object.pollLast():
-
-
-
-#### Vector
-Vector uses a dynamic array to store the data elements. It is similar to ArrayList. However, It is synchronized and contains many methods that are not the part of Collection framework.
-
-````
-import java.util.*;  
-	public class TestJavaCollection3{  
-	public static void main(String args[]){  
-	Vector<String> v=new Vector<String>();  
-	v.add("Ayush");  
-	v.add("Amit");  
-	v.add("Ashish");  
-	v.add("Garima");  
-	Iterator<String> itr=v.iterator();  
-	while(itr.hasNext()){  
-		System.out.println(itr.next());  
-	}  
-	}  
-}  
-````
-
-
-
-
-#### Stack
-
-The stack is the subclass of Vector. It implements the last-in-first-out data structure, i.e., Stack. The stack contains all of the methods of Vector class and also provides its methods like boolean push(), boolean peek(), boolean push(object o), which defines its properties.
-
-````
-import java.util.*;  
-public class TestJavaCollection4{  
-	public static void main(String args[]){  
-	Stack<String> stack = new Stack<String>();  
-	stack.push("Ayush");  
-	stack.push("Garvit");  
-	stack.push("Amit");  
-	stack.push("Ashish");  
-	stack.push("Garima");  
-	stack.pop();  
-	Iterator<String> itr=stack.iterator();  
-	while(itr.hasNext()){  
-		System.out.println(itr.next());  
-	}  
-	}  
-}  
-````
-
-### 23. Queue Interface
-
-Queue interface maintains the first-in-first-out order. It can be defined as an ordered list that is used to hold the elements which are about to be processed. There are various classes like PriorityQueue, Deque, and ArrayDeque which implements the Queue interface.
-
-````
-Queue<String> q1 = new PriorityQueue();  
-Queue<String> q2 = new ArrayDeque();  
-````
-
-#### Priority Queue
-The PriorityQueue class implements the Queue interface. It holds the elements or objects which are to be processed by their priorities. PriorityQueue doesn't allow null values to be stored in the queue.
-````
-import java.util.*;  
-public class TestJavaCollection5{  
-	public static void main(String args[]){  
-		PriorityQueue<String> queue=new PriorityQueue<String>();  
-		queue.add("Amit Sharma");  
-		queue.add("Vijay Raj");  
-		queue.add("JaiShankar");  
-		queue.add("Raj");  
-		System.out.println("head:"+queue.element());  
-		System.out.println("head:"+queue.peek());  
-		System.out.println("iterating the queue elements:");  
-		Iterator itr=queue.iterator();  
-		while(itr.hasNext()){  
-		System.out.println(itr.next());  
-		}  
-		queue.remove();  
-		queue.poll();  
-		System.out.println("after removing two elements:");  
-		Iterator<String> itr2=queue.iterator();  
-		while(itr2.hasNext()){  
-		System.out.println(itr2.next());  
-		}  
-	}  
-}  
-````
-
-### 24. Set Interface
-
-Set Interface in Java is present in java.util package. It extends the Collection interface. It represents the unordered set of elements which doesn't allow us to store the duplicate items. We can store at most one null value in Set. Set is implemented by HashSet, LinkedHashSet, and TreeSet.
-
-````
-Set<data-type> s1 = new HashSet<data-type>();  
-Set<data-type> s2 = new LinkedHashSet<data-type>();  
-Set<data-type> s3 = new TreeSet<data-type>();  
-````
-
-#### HashSet
-HashSet class implements Set Interface. It represents the collection that uses a hash table for storage. Hashing is used to store the elements in the HashSet. It contains unique items.
-
-
-````
-import java.util.*;  
-public class TestJavaCollection7{  
-	public static void main(String args[]){  
-		//Creating HashSet and adding elements  
-		HashSet<String> set=new HashSet<String>();  
-		set.add("Ravi");  
-		set.add("Vijay");  
-		set.add("Ravi");  
-		set.add("Ajay");  
-		//Traversing elements  
-		Iterator<String> itr=set.iterator();  
-		while(itr.hasNext()){  
-			System.out.println(itr.next());  
-		}  
-	}  
-}  
-````
-
-### 25. Important Collections
-
-#### 1. HashSet
-
-* HashSet stores the elements by using a mechanism called hashing.
-* HashSet contains unique elements only.
-* HashSet allows null value.
-* HashSet class is non synchronized.
-* HashSet doesn't maintain the insertion order. Here, elements are inserted on the basis of their hashcode.
-* HashSet is the best approach for search operations.
-* The initial default capacity of HashSet is 16, and the load factor is 0.75.
-* HashSet implements Set Interface.
-````
-  HashSet<String> set=new HashSet();  
-       set.add("One");    
-       set.add("Two");    
-       set.add("Three");   
-       set.add("Four");  
-       set.add("Five");  
-       Iterator<String> i=set.iterator();  
-       while(i.hasNext())  
-       {  
-       	 System.out.println(i.next());  
-       }  
-````
-* set.add("hello")
-* set.remove("one")
-* set.size()
-* set.clear()
-* set.isEmpty()
-* set.contains("two")
-* set.Iterator iterator()
-* set.clone()
-
-#### 2. HashMap
-
-* HashMap class contains values based on the key.
-* HashMap class contains only unique keys.
-* HashMap class may have one null key and multiple null values.
-* HashMap class is non synchronized.
-* HashMap class maintains no order.
-* The initial default capacity of Java HashMap class is 16 with a load factor of 0.75.
-
-````
-import java.util.*;  
-class HashMap1{  
- public static void main(String args[]){  
-   HashMap<Integer,String> hm=new HashMap<Integer,String>();    
-    System.out.println("Initial list of elements: "+hm);  
-      hm.put(100,"Amit");    
-      hm.put(101,"Vijay");    
-      hm.put(102,"Rahul");   
-       
-      System.out.println("After invoking put() method ");  
-      for(Map.Entry m:hm.entrySet()){    
-       System.out.println(m.getKey()+" "+m.getValue());    
-      }  
-        
-      hm.putIfAbsent(103, "Gaurav");  
-      System.out.println("After invoking putIfAbsent() method ");  
-      for(Map.Entry m:hm.entrySet()){    
-           System.out.println(m.getKey()+" "+m.getValue());    
-          }  
-      HashMap<Integer,String> map=new HashMap<Integer,String>();  
-      map.put(104,"Ravi");  
-      map.putAll(hm);  
-      System.out.println("After invoking putAll() method ");  
-      for(Map.Entry m:map.entrySet()){    
-           System.out.println(m.getKey()+" "+m.getValue());    
-          }  
- }  
-}  
-````
-
-
-* void clear(): Used to remove all mappings from a map.
-* boolean containsKey(Object key): Used to return True if for a specified key, mapping is present in the map.
-* boolean containsValue(Object value): Used to return true if one or more key is mapped to a specified value.
-* Object clone(): It is used to return a shallow copy of the mentioned hash map.
-* boolean isEmpty(): Used to check whether the map is empty or not. Returns true if the map is empty.
-* Set entrySet(): It is used to return a set view of the hash map.
-* Object get(Object key): It is used to retrieve or fetch the value mapped by a particular key.
-* Set keySet(): It is used to return a set view of the keys.
-* int size(): It is used to return the size of a map.
-* Object put(Object key, Object value): It is used to insert a particular mapping of key-value pair into a map.
-* putAll(Map M): It is used to copy all of the elements from one map into another.
-* Object remove(Object key): It is used to remove the values for any particular key in the Map.
-* Collection values(): It is used to return a Collection view of the values in the HashMap.
-* compute(K key, BiFunction<K, V> remappingFunction): This method Attempts to compute a mapping for the specified key and its * current mapped value (or null if there is no current mapping).
-* computeIfAbsent(K key, Function<K> mappingFunction): This method If the specified key is not already associated with a value (or is mapped to null), attempts to compute its value using the given mapping function and enters it into this map unless null.
-* forEach(BiConsumer<K, V> action): This method Performs the given action for each entry in this map until all entries have been processed or the action throws an exception.
-* getOrDefault(Object key, V defaultValue): This method returns the value to which the specified key is mapped, or defaultValue if this map contains no mapping for t/he key.
-* merge(K key, V value, BiFunction<K, V> remappingFunction): This method If the specified key is not already associated with a value or is associated with null, associates it with the given non-null value.
-
-* replace(K key, V oldValue, V newValue): This method replaces the entry for the specified key only if currently mapped to the specified value.
-* replaceAll(BiFunction<K, V> function): This method replaces each entry’s value with the result of invoking the given function on that entry until all entries have been processed or the function throws an exception.
-
-
-#### 3. LinkedHashMap
-Java LinkedHashMap contains values based on the key.
-Java LinkedHashMap contains unique elements.
-Java LinkedHashMap may have one null key and multiple null values.
-Java LinkedHashMap is non synchronized.
-Java LinkedHashMap maintains insertion order.
-The initial default capacity of Java HashMap class is 16 with a load factor of 0.75.
-
-````
-import java.util.*;  
-public class LinkedHashMap3 {  
-   public static void main(String args[]) {  
-    Map<Integer,String> map=new LinkedHashMap<Integer,String>();        
-     map.put(101,"Amit");    
-     map.put(102,"Vijay");    
-     map.put(103,"Rahul");    
-     System.out.println("Before invoking remove() method: "+map);     
-    map.remove(102);  
-    System.out.println("After invoking remove() method: "+map);    
-   }      
-}  
-````
-
-* void clear(): This method is used to remove all the mappings from the map.
-* boolean containsKey(Object key): This method is used to returns true if a specified element is mapped by one or more keys.
-* Object get(Object key): The method is used to retrieve or fetch the value mapped by the specified key.
-* protected boolean removeEldestEntry(Map.Entry eldest): The method is used to return true when the map removes its eldest entry from the map.
-* entrySet​(): This method returns a Set view of the mappings contained in this map.
-* forEach​(BiConsumer<K,V> action): This method Performs the given action for each entry in this map until all entries have been processed or the action throws an exception.
-* getOrDefault​(Object key, V defaultValue): This method returns the value to which the specified key is mapped, or defaultValue if this map contains no mapping for the key.
-* keySet​(): This method returns a Set view of the keys contained in this map.
-removeEldestEntry​(Map.Entry<K,V> eldest): This method returns true if this map should remove its eldest entry.
-* replaceAll​(BiFunction<K,V> function): This method replaces each entry’s value with the result of invoking the given function on that entry until all entries have been processed or the function throws an exception.
-* values​(): This method returns a Collection view of the values contained in this map.
-
-
-
-
-
-### 26. Arrays
-
-#### An array is a collection of similar items stored at contiguous memory locations
-
-* Arrays allow random access of elements.
-* Arrays have better cache locality
-* In Java all arrays are dynamically allocated.
-* The direct superclass of an array type is Object. 
-* Every array type implements the interfaces Cloneable and java.io.Serializable.
-
-#### Declaration
-* int[] intArray = new int[20];
-* int[][] intArray = new int[10][20]; 
-* int[] intArray = new int[]{ 1,2,3,4,5,6,7,8,9,10 }; 
-
-#### Returning arrays from methods
-````public static int[] m1()  
-    { 
-        // returning  array 
-        return new int[]{1,2,3}; 
-    } 
-````
-
-#### Cloning of arrays
-* When you clone a single dimensional array, such as Object[], a “deep copy” is performed with the new array containing copies of the original array’s elements as opposed to references. 
-````
-class Test 
-{     
-    public static void main(String args[])  
-    { 
-        int intArray[] = {1,2,3}; 
-          
-        int cloneArray[] = intArray.clone(); 
-          
-        // will print false as deep copy is created 
-        // for one-dimensional array 
-        System.out.println(intArray == cloneArray); 
-          
-        for (int i = 0; i < cloneArray.length; i++) { 
-            System.out.print(cloneArray[i]+" "); 
-        } 
-    } 
-}
-
-* A clone of a multidimensional array (like Object[][]) is a “shallow copy” however, which is to say that it creates only a single new array with each element array a reference to an original element array but subarrays are shared.  
-````
-class Test 
-{     
-    public static void main(String args[])  
-    { 
-        int intArray[][] = {{1,2,3},{4,5}}; 
-          
-        int cloneArray[][] = intArray.clone(); 
-          
-        // will print false 
-        System.out.println(intArray == cloneArray); 
-          
-        // will print true as shallow copy is created 
-        // i.e. sub-arrays are shared 
-        System.out.println(intArray[0] == cloneArray[0]); 
-        System.out.println(intArray[1] == cloneArray[1]); 
-          
-    } 
-} 
-````
-
-#### Commom Problems
-* Array Rotation
-
-
-
 
