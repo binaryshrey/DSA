@@ -498,7 +498,7 @@ Following two are the most commonly used representations of a graph.
 ### 28. Algorithm Analysis
 An algorithm is a finite sequence of logically related instructions to solve a computational problem.
 #### Types of Algorithm
-* Iterative 
+* Iterative (Top-down)
 ```
 Fact(n)
 {
@@ -508,7 +508,7 @@ Fact(n)
 }
 ```
 
-* Recursive
+* Recursive (Bottom-up)
 ```
 Fact(n)
 {
@@ -517,6 +517,15 @@ Fact(n)
 	else
 		return n * fact(n-1);
 }
+
+Asymptotic Analysis : mesauring order of growth of an algorithm in terms of input size
+
+C < loglog(n) < log(n) < n^1/3 < n^1/2 < n < n^2 < n^3 < 2^n < n^n
+
+Best Case − Minimum time required for program execution.
+Average Case − Average time required for program execution.
+Worst Case − Maximum time required for program execution.
+
 ```
 #### Asymptotic Analysis
 * Big-oh notation
@@ -554,8 +563,10 @@ Theta can be used to denote tight bounds of an algorithm.
 
 
 #### Calucalting Time-Complexity for Recurrence relations
+* Step Count Method
 * Substitution Method
 * Master Theorem
+* Recurrence Tree
 
 ```
 Master Theorem :
