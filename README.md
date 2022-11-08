@@ -57,10 +57,10 @@ class HelloWorld
 ```
 
 ### 3. Procedure Oriented Programming
-High-level languages provide an easy approach to users in developing their logic to solve any given problem.
-These languages are machine-independent and we can develop program logic without having a knowledge about computer's architecture.
-Conventional programming using High-level languages such as BASIC, C, COBOL are called Procedural Oriented Programming(POP).
-It allows users to develop thier logic by applying a no of functions to increase program productivity.
+Procedure Oriented Programming is a programming paradigm (top-down approach), where a program is written as a sequence of procedures or functions therby divinding a large program into smaller programs with specific functionality.
+In POP, the major emphasis is on procedure (function) and not on the data and most functions share data defined at global level.
+These languages High-level languages such as BASIC, C, COBOL are machine-independent and we can develop program logic without having a knowledge about computer's architecture.
+
 
 #### Characteristics of POP:
 * Emphasis is on functions
