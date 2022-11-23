@@ -59,7 +59,7 @@ class HelloWorld
 ### 3. Procedure Oriented Programming
 Procedure Oriented Programming is a programming paradigm (top-down approach), where a program is written as a sequence of procedures or functions therby divinding a large program into smaller programs with specific functionality.
 In POP, the major emphasis is on procedure (function) and not on the data and most functions share data defined at global level.
-These languages High-level languages such as BASIC, C, COBOL are machine-independent and we can develop program logic without having a knowledge about computer's architecture.
+POP languages are high-level languages such as BASIC, C, COBOL are machine-independent and we can develop program logic without having a knowledge about computer's architecture.
 
 
 #### Characteristics of POP:
@@ -68,8 +68,8 @@ These languages High-level languages such as BASIC, C, COBOL are machine-indepen
 * Uses Top-Down approach
 
 ### 4. Object Oriented Programming
-An OOP is a modular approach, which allows data to be applied within the stipulated program area. It also provides reusablity feature to 
-develop productive logic, which means more emphasis is given on data.
+An OOP is a design philosophy or programming paradigm, that models software design around data or objects rather than functions and logic. 
+An object is referred to as a data field that has unique attributes and behavior and it also provides reusablity feature to develop productive logic, which means more emphasis is given on data.
 
 #### Characteristics of OOP:
 * More emphasis on data rather than functions
@@ -78,10 +78,10 @@ develop productive logic, which means more emphasis is given on data.
 #### Basic elements of OOP:
 
 * Class : It is a group of similar types of Objects which possess same attributes and behaviour. (Object factory / User-Desined datatype)
-* Object :It is a uniques entity that contains data and functions (characteristics and behaviour) toghether in an OOP.
+* Object :It is a unique entity that contains data and functions (characteristics and behaviour) toghether in an OOP.
 * Data Abstraction : Act of representing essential features without including the background details
 * Encapsulation : The wrapping of data and functions, toghether in a single unit.
-* Data Hiding : The data which cannot be accessed directly outside class premise, although they are in same class
+* Data Hiding : The data which cannot be accessed directly outside class premise.
 * Dynamic Binding : The process of linking function call to function signature
 * Inheritance : Property by which object of one class acquire some common properties of another class
 * Polymorphism : The process of using a function for more than one purpose.
@@ -93,18 +93,19 @@ develop productive logic, which means more emphasis is given on data.
 * Platform independent
 * Multi-threaded
 * Case-sensitive
-* Architecture-neutral
 * Robust and Secure
 
 
 ### 6. Byte-Code
+Byte Code is an intermediate code in form of .class file which is generated as soon as a Java program is compiled and is then acted upon by JVM making it platform independent.
+JAVA is a HLL. The program written in java is compiled to an intermediate code called Byte Code. This code is independent
+of the machine on which the program is to run. When the code is to be run on any machine, an Intepretor known as JVM 
+converts the Byte Code to MLL.
+
 The conversion of HLL to MLL can be done in two ways
 * Interpretor : Conversion in performed line by line, execution stops when an error is encountered
 * Compiler : Conversion is performed all at once, all errors are listed toghether
 
-JAVA is a HLL. The program written in java is compiled to an intermediate code called Byte Code. This code is independent
-of the machine on which the program is to run. When the code is to be run on any machine, an Intepretor known as JVM 
-converts the Byte Code to MLL.
 
 ### 7. JDK
 The Java Development Kit (JDK) is a software development environment used for developing Java applications and applets. It includes the Java Runtime Environment (JRE), an interpreter/loader (Java), a compiler (javac), an archiver (jar), a documentation generator (Javadoc) and other tools needed in Java development.
