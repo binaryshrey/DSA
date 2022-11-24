@@ -17,19 +17,20 @@ A beginner's guide to getting started with Data Structures and Algorithms with J
 * [Packages](#13-packages)
 * [Formatted Output](#14-formatted-output)
 * [String Manipulation](#15-string-manipulation)
-* [Arrays](#16-arrays)
-* [LinkedList](#17-linkedlist)
-* [Stacks](#18-stacks)
-* [Queue](#19-queue)
-* [Binary Tree](#20-binary-tree)
-* [Binary Search Tree](#21-binary-search-tree)
-* [Heap](#22-heap)
-* [Hashing](#23-hashing)
-* [Graphs](#24-graphs)
-* [Matrix](#25-matrix)
-* [Advanced DS](#26-advanced-ds)
-* [Collections in Java](#27-collections-in-java)
-* [Algorithm Analysis](#28-algorithm-analysis)
+* [Data Structures](#16-data-structures)
+* [Arrays](#17-arrays)
+* [LinkedList](#18-linkedlist)
+* [Stacks](#19-stacks)
+* [Queue](#20-queue)
+* [Binary Tree](#21-binary-tree)
+* [Binary Search Tree](#22-binary-search-tree)
+* [Heap](#23-heap)
+* [Hashing](#24-hashing)
+* [Graphs](#25-graphs)
+* [Matrix](#26-matrix)
+* [Advanced DS](#27-advanced-ds)
+* [Collections in Java](#28-collections-in-java)
+* [Algorithm Analysis](#29-algorithm-analysis)
 
 
 <br>
@@ -358,6 +359,9 @@ int n = Integer.parseInt(str);
 ```
 String str = Integer.toString(n);
 ```
+
+### 17. Data Structures
+A data structure is a storage that is used to store and organize data. It is a way of arranging data so that it can be accessed and updated efficiently.
 
 
 ### 16. Arrays
