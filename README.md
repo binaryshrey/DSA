@@ -499,6 +499,53 @@ Following two are the most commonly used representations of a graph.
 ### 26. Advanced DS
 
 ### 27. Collections in Java
+Collections in Java is a framework that provides an architecture to store and manipulate the group of objects.
+
+				Iterable
+				    ^
+				    |
+				    |
+				Collection
+				    |
+		--------------------------------------------
+		|		    |			    |
+		|		    |			    |	
+	       List		  Queue	                   Set
+	        |		    |			    |	
+	- ArrayList	- Queue (Priority Queue)	- SortedSet (TreeSet)		
+	- LinkedList	- Deque (Array Dequeue)		- Set (HashSet, LinkedHashSet)
+	- Vector (Stack)
+	
+
+* #### Methods
+```
+.add
+.addAll
+.remove
+.removeAll
+.size
+.contains
+.toArray
+.isEmpty
+```
+
+* #### Iterator interface
+Iterator interface provides the facility of iterating the elements in a forward direction only.
+```
+.hasNext()
+.next()
+.remove()
+```
+
+```
+Iterator<String> itr=coll.iterator();  
+while(itr.hasNext()){  
+	System.out.println(itr.next());  
+}  
+```
+
+
+
 
 ### 28. Algorithm Analysis
 An algorithm is a finite sequence of logically related instructions to solve a computational problem.
