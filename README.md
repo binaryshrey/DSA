@@ -625,10 +625,10 @@ System.out.println(itr.next());
 ```
 
 
-### B. Queue
+### II. Queue
 * impl FIFO
 
-#### 1.PriorityQueue
+#### A.PriorityQueue
 * doesn't allow null values to be stored in the queue.
 ```
 	// Creating empty priority queue
@@ -649,10 +649,10 @@ System.out.println(itr.next());
         System.out.println(pQueue.peek());
 ```
 
-### C. Deque
+### III. Deque
 * add and remove the elements from both ends of the queue
 
-#### 1.ArrayDeque
+#### A.ArrayDeque
 ```
 	// Initializing an deque
         ArrayDeque<Integer> de_que = new ArrayDeque<Integer>(10);
