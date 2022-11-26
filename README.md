@@ -544,6 +544,85 @@ while(itr.hasNext()){
 }  
 ```
 
+### I. List
+### A. ArrayList
+* dynamic arrays in Java
+* allows random access
+* no primitive types - only wrappers
+* non-synchronized
+* maintains insertion order
+```
+ArrayList<String> list=new ArrayList<String>();//Creating arraylist  
+
+list.add("Ravi");
+list.add("Vijay");  
+list.add("Ravi");  
+list.add("Ajay");  
+
+//Traversing list through Iterator  
+Iterator itr=list.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+
+for (int i = 0; i < list.size(); i++)
+    System.out.print(list.get(i) + " ");
+}
+```
+
+### B. LinkedList
+* impl of LinkedList DS
+```
+LinkedList<String> al=new LinkedList<String>();  
+
+al.add("Ravi");  
+al.add("Vijay");  
+al.add("Ravi");  
+al.add("Ajay");  
+
+Iterator<String> itr=al.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}
+```
+
+
+### C. Vector
+* similar to ArrayList
+* synchronized
+```
+Vector<String> v=new Vector<String>();  
+
+v.add("Ayush");  
+v.add("Amit");  
+v.add("Ashish");  
+v.add("Garima");  
+
+Iterator<String> itr=v.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}
+```
+
+### D. Stack
+* impl LIFO DS
+* push, peek, pop
+
+```
+Stack<String> stack = new Stack<String>();  
+
+stack.push("Ayush");  
+stack.push("Garvit");  
+stack.push("Amit");  
+stack.push("Ashish");  
+stack.push("Garima");  
+
+stack.pop();  
+
+Iterator<String> itr=stack.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}
+```
 
 
 
