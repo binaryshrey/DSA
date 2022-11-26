@@ -683,6 +683,67 @@ System.out.println(itr.next());
 ```
 
 
+
+### IV. Set Interface
+* doesn't allow us to store the duplicate items. 
+* can store at most one null value in Set
+
+#### A. HashSet
+* contains unique items.
+* does not maintains the insertion order
+```
+HashSet<String> set=new HashSet<String>();  
+
+set.add("Ravi");  
+set.add("Vijay");  
+set.add("Ravi");  
+set.add("Ajay");  
+
+//Traversing elements  
+Iterator<String> itr=set.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}
+```
+
+#### B. LinkedHashSet
+- contains unique elements
+- maintains the insertion order
+- permits null elements.
+```
+LinkedHashSet<String> set=new LinkedHashSet<String>(); 
+ 
+set.add("Ravi");  
+set.add("Vijay");  
+set.add("Ravi");  
+set.add("Ajay");  
+
+Iterator<String> itr=set.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}
+```
+
+#### C. TreeSet
+- contains unique elements
+- sorted in ascending order
+```
+//Creating and adding elements  
+TreeSet<String> set=new TreeSet<String>();  
+
+set.add("Ravi");  
+set.add("Vijay");  
+set.add("Ravi");  
+set.add("Ajay"); 
+ 
+//traversing elements  
+Iterator<String> itr=set.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}
+```
+
+
 ### 28. Algorithm Analysis
 An algorithm is a finite sequence of logically related instructions to solve a computational problem.
 #### Types of Algorithm
