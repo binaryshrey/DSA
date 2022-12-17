@@ -1,4 +1,4 @@
-# DSA  
+# DSA   
 A beginner's guide to getting started with Data Structures and Algorithms with JAVA.
 
 ### Table of contents
